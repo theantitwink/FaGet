@@ -1,15 +1,40 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "taskName": "build",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/src/BaGetter/BaGetter.csproj"
-            ],
-            "problemMatcher": "$msCompile"
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/src/BaGetter/BaGetter.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Publish BaGetter",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "publish",
+        "${workspaceFolder}/src/BaGetter/BaGetter.csproj",
+        "--configuration",
+        "Release",
+        "--output",
+        "${workspaceFolder}/app",
+        "--no-restore",
+        "-p",
+        "Version=1.4.5",
+        "-p",
+        "DebugType=none",
+        "-p",
+        "DebugSymbols=false",
+        "-p",
+        "GenerateDocumentationFile=false",
+        "-p",
+        "UseAppHost=false",
+      ],
+      "problemMatcher": "$msCompile"
+    }
+  ]
 }
