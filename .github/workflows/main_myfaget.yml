@@ -11,6 +11,10 @@ on:
 
 permissions: write-all
 
+concurrency:
+  group: Build and deploy ASP.Net Core app to Azure Web App - myfaget
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -64,7 +68,5 @@ jobs:
     steps:
       - name: Clean up build artifacts
         uses: dgmjr-actions/cleanup-build-artifacts@main
-        with: 
+        with:
           token: ${{ github.token }}
-        
-    
