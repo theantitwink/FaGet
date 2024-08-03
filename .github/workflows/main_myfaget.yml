@@ -9,6 +9,8 @@ on:
       - main
   workflow_dispatch:
 
+permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,8 +27,8 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
-      - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      - name: dotnet publish BaGetter
+        run: dotnet publish BaGetter -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -55,3 +57,14 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0710136A3FC54D9B9FC59DB43CC3E2BA }}
           package: .
+
+  clean-up-artifacts:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Clean up build artifacts
+        uses: dgmjr-actions/cleanup-build-artifacts@main
+        with: 
+          token: ${{ github.token }}
+        
+    
