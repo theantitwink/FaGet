@@ -27,8 +27,8 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
-      - name: dotnet publish BaGetter/BaGetter.csproj
-        run: dotnet publish BaGetter/BaGetter.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      - name: dotnet publish src/BaGetter/BaGetter.csproj
+        run: dotnet publish src/BaGetter/BaGetter.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
