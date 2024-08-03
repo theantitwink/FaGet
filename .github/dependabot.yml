@@ -1,0 +1,20 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "chore(deps): update"
+    labels:
+      - "dependencies"
+      - "csharp"
+      - "dotnet"
+      - "nuget"
+    assignees:
+      - "dependabot[bot]"
+      - "dgmjr"
+    reviewers:
+      - "dgmjr"
+      - "dependabot-preview[bot]"
