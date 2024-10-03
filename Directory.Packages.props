@@ -37,7 +37,7 @@
     <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
     <PackageVersion Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
     <PackageVersion Include="Aliyun.OSS.SDK.NetCore" Version="2.13.0" />
-    <PackageVersion Include="AWSSDK.S3" Version="3.7.307" />
+    <PackageVersion Include="AWSSDK.S3" Version="3.7.404" />
     <PackageVersion Include="AWSSDK.SecurityToken" Version="3.7.300.60" />
     <PackageVersion Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
     <PackageVersion Include="Microsoft.Azure.Search" Version="10.1.0" />
