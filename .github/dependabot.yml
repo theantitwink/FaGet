@@ -6,15 +6,26 @@ updates:
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "chore(deps): update"
+      prefix: "[nuget]: update"
     labels:
       - "dependencies"
       - "csharp"
       - "dotnet"
       - "nuget"
     assignees:
-      - "dependabot[bot]"
-      - "dgmjr"
+      - "iamtheantitwink"
     reviewers:
-      - "dgmjr"
-      - "dependabot-preview[bot]"
+      - "iamtheantitwink"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "[github-actions]: update"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    assignees:
+      - "iamtheantitwink"
+    reviewers:
+      - "iamtheantitwink"

@@ -5,11 +5,11 @@ rules: # Array of rules
     mergeMethod: rebase # Optional, one of [none, merge, squash, rebase, hardreset], Default: none.
     mergeUnstable: false # Optional, merge pull request even when the mergeable_state is not clean. Default: false
     assignees: # Optional
-      - dgmjr
+      - iamtheantitwink
     reviewers: # Optional
-      - dgmjr
+      - iamtheantitwink
     conflictReviewers: # Optional, on merge conflict assign a reviewer
-      - dgmjr
+      - iamtheantitwink
   - base: main
     upstream: dgmjr/BaGetter:main # Required. Can be a branch in the same forked repo.
 label: ":arrow_heading_down: pull" # Optional
